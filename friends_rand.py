@@ -5,7 +5,8 @@ import re
 import random
 
 
-friends_base_dir = os.path.abspath("/media/AmiD/Video/Friends")
+friends_base_dir = os.path.abspath("/media/amid/AmiD/Video/Friends")
+print(friends_base_dir)
 ignore_phrases = ["other", 'srt']
 player_command = "vlc"
 
@@ -17,7 +18,6 @@ for root, dirs, files in os.walk(friends_base_dir):
             # print(abs_file_path)
             friends_list.append(abs_file_path)
 
-random.shuffle(friends_list)
 random.shuffle(friends_list)
 # print(friends_list)
 os.system("{} '{}'".format(player_command, friends_list[0]))
